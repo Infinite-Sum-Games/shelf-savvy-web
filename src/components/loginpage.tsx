@@ -61,6 +61,7 @@ export default function LoginPage() {
         const responseData = await response.json();
         if (responseData.token) {
           secureStorage.setItem("token", responseData.token);
+          secureStorage.setItem("email", responseData.email);
         }
         navigate("/Homepage");
       } else {
